@@ -1,0 +1,21 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Advent of Code solutions",
+  "main": "index.js",
+  "scripts": {
+    "solve": "node \"$YEAR/day$DAY.js\"",
+    "new-day": "mkdir -p \"$YEAR\" && cp template.js \"$YEAR/day$DAY.js\" && sed -i '' \"s/const day = 0;/const day = $DAY;/\" \"$YEAR/day$DAY.js\" && sed -i '' \"s/const year = 2024;/const year = $YEAR;/\" \"$YEAR/day$DAY.js\" && sed -i '' \"s|require('./fetchData')|require('../fetchData')|\" \"$YEAR/day$DAY.js\""
+  },
+  "keywords": [
+    "adventofcode",
+    "aoc"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
