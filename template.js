@@ -1,18 +1,18 @@
 require('dotenv').config();
-const fetchData = require('./fetchData');
+let fetchData = require('./fetchData');
 
 async function main() {
   try {
-    const day = 0;
-    const year = 2024;
+    let day = 0;
+    let year = 2024;
 
     // Get the input data
-    const input = await fetchData(day, year);
+    let input = await fetchData(day, year);
 
     // Part 1
     function solvePart1(data) {
       let ans = 0;
-      const lines = data.split('\n').filter((line) => line.trim() !== '');
+      let lines = data.split('\n').filter((line) => line.trim() !== '');
 
       // Your solution for part 1 here
 
@@ -22,7 +22,7 @@ async function main() {
     // Part 2
     function solvePart2(data) {
       let ans = 0;
-      const lines = data.split('\n').filter((line) => line.trim() !== '');
+      let lines = data.split('\n').filter((line) => line.trim() !== '');
 
       // Your solution for part 2 here
 

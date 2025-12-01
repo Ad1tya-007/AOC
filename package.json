@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "solve": "node \"$YEAR/day$DAY.js\"",
-    "new-day": "mkdir -p \"$YEAR\" && cp template.js \"$YEAR/day$DAY.js\" && sed -i '' \"s/const day = 0;/const day = $DAY;/\" \"$YEAR/day$DAY.js\" && sed -i '' \"s/const year = 2024;/const year = $YEAR;/\" \"$YEAR/day$DAY.js\" && sed -i '' \"s|require('./fetchData')|require('../fetchData')|\" \"$YEAR/day$DAY.js\""
+    "new-day": "mkdir -p \"$YEAR\" && cp template.js \"$YEAR/day$DAY.js\" && sed -i '' \"s/let day = 0;/let day = $DAY;/\" \"$YEAR/day$DAY.js\" && sed -i '' \"s/let year = 2024;/let year = $YEAR;/\" \"$YEAR/day$DAY.js\" && sed -i '' \"s|require('./fetchData')|require('../fetchData')|\" \"$YEAR/day$DAY.js\""
   },
   "keywords": [
     "adventofcode",
